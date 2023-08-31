@@ -1,0 +1,22 @@
+.debug {
+  background-color: rgba(0, 255, 0, .2);
+  border: 1px solid black;
+  min-height: 70px;
+}
+
+header {
+  height: 70px;
+}
+
+main {
+  height: calc(100vh - 70px);
+}
+
+aside {
+  width: 150px;
+}
+
+.main-content {
+  width: 100%;
+  overflow: auto;
+}
