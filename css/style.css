@@ -64,6 +64,7 @@ aside {
   color: white;
   background-color: var(--dark-blue);
   background-image: url(../img/sidebar-bg.png);
+  overflow: hidden;
 }
 
 aside .menu-desktop {
@@ -91,8 +92,8 @@ aside .aside-top {
 }
 
 aside .aside-bottom {
-
- height: 30px;
+  
+  height: 30px;
 }
 
 /* MAIN CONTENT */
