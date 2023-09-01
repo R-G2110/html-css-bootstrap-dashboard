@@ -107,11 +107,9 @@ aside .aside-bottom {
   background-color: #1B72E8;
 }
 
-.main-content .content .btn-small {
-
 
 @media screen and (max-width: 991px) {
   aside {
-    width: 70px;
+    width: 50px;
   }
 }
