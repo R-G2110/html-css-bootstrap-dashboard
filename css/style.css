@@ -1,22 +1,106 @@
+:root{
+  --dark-blue: #051E34;
+}
+
+[class^='container'],
+[class^='col'] {
+  /* background-color: rgba(0, 255, 0, .2);
+  border: 1px solid black; */
+}
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+}
+
+
+
 .debug {
   background-color: rgba(0, 255, 0, .2);
   border: 1px solid black;
-  min-height: 70px;
+  min-height: 10px;
 }
 
+/* HEADER */
 header {
   height: 70px;
+  background-color: #F8F9FA;
 }
 
+header .logo {
+  width: 50px;
+}
+
+header .logo-desktop {
+  display: none;
+}
+
+header .logo-mobile {
+  width: 45px;
+}
+
+header .fa-bell  {
+  color: orange;
+}
+
+/* MAIN */
 main {
   height: calc(100vh - 70px);
 }
 
+/* ASIDE */
 aside {
+  height: 100%;
   width: 150px;
+  color: white;
+  background-color: var(--dark-blue);
+  background-image: url(../img/sidebar-bg.png);
 }
 
+aside .menu-desktop {
+  display: none;
+}
+
+aside li a {
+  padding: 3px;
+  color: white;
+}
+
+aside li a i {
+  width: 30px;
+  font-size: 20px;
+  justify-content: flex-end;
+}
+
+aside li:hover a {
+  border: 1px solid white;
+  color: var(--dark-blue);
+  background-color: white;
+}
+aside .aside-top {
+  height: calc(100% - 30px);
+}
+
+aside .aside-bottom {
+
+ height: 30px;
+}
+
+/* MAIN CONTENT */
 .main-content {
   width: 100%;
+  height: 100%;
   overflow: auto;
+}
+
+@media screen and (max-width: 991px) {
+  aside {
+    width: 70px;
+  }
 }
