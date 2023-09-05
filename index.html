@@ -13,6 +13,9 @@
   <!-- Custom CSS -->
   <link rel="stylesheet" href="css/style.css">
 
+  <!-- Custom SCSS -->
+  <link rel="stylesheet" href="scss/_offcanvas.scss">
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Html Css Bootstrap Dashboard</title>
@@ -62,7 +65,7 @@
       </nav>
     </header>
 
-    <main class="d-flex debug">
+    <main class="d-flex">
       <aside class="d-flex flex-column align-items-center ">
         <div class="aside-top pt-2 ">
           <nav>
@@ -99,30 +102,158 @@
           </ul>
         </div>
       </aside>
-      <div class="main-content debug">
-        <div class="main-content-top"></div>
+      <div class="main-content">
+        <div class="main-content-top">
+          <div class="container h-100">
+            <div class="row h-100 row-cols-1">
+              <div class="col-12 col-md-5  py-3">
+                <div class="row">
+                  <div class="col">
+                    <h2 class="d-inline-block">Boolean</h2>
+                    <span class="badge rounded-pill text-bg-primary">Piano blaze</span>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col">
+                    <span class="badge rounded-pill text-bg-primary">3app</span>
+                    <span>>></span>
+                    <span class="badge rounded-pill text-bg-primary">Boolean mobile app</span>
+                    <span class="badge rounded-pill text-bg-primary">Boolean web app</span>
+                    <span class="badge rounded-pill text-bg-primary">Boolean blog app</span>
+                  </div>
+                  
+                </div>
+              </div>
+              <div class="col-12 col-md-4  py-3">
+                <span>Studenti online negli ultimi 30 minuti:</span>
+                <h4>24</h4>
+              </div>
+              <div class="col-12 col-md-3 py-3 d-flex ">
+                
+                <h6>Nuovo studente</h6>
+
+                <button class="btn btn-primary add-student" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">+</button>
+                <div class="offcanvas offcanvas-end offcanvas-custom " data-bs-scroll="true"    tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+                  <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Inserisci un nuovo studente</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                  </div>
+
+                  <!-- form -->
+                  <div class="offcanvas-body ">
+                    
+                    <form>
+                      <!-- first name & last name -->
+                      <div class="row g-3">
+                        <div class="col">
+                          <label for="first-name" class="form-label">Nome</label>
+                          <input type="text" class="form-control" id="first-name" aria-label="First name">
+                        </div>
+                        <div class="col">
+                          <label for="last-name" class="form-label">Cognome</label>
+                          <input type="text" id="last-name" class="form-control" aria-label="Last name">
+                        </div>
+                      </div>
+
+                      <!-- email & password -->
+                      <div class="row g-3">
+                        <div class="col">
+                          <label for="email" class="form-label">Email</label>
+                          <input type="text" id="email" class="form-control" aria-label="First name">
+                        </div>
+                        <div class="col">
+                          <label for="password" class="form-label">Password</label>
+                          <input type="text" id="password" class="form-control" aria-label="Last name">
+                        </div>
+                      </div>
+
+                      <!-- confirm email & password -->
+                      <div class="row g-3">
+                        <div class="col">
+                          <label for="confirm-email" class="form-label">Conferma email</label>
+                          <input type="text" id="confirm-email" class="form-control" aria-label="First name">
+                        </div>
+                        <div class="col">
+                          <label for="confirm-password" class="form-label">Conferma password</label>
+                          <input type="text" id="confirm-password" class="form-control" aria-label="Last name">
+                        </div>
+                      </div>
+
+                      <!-- address -->
+                      <div class="row">
+                        <div class="col-12">
+                          <label for="inputAddress" class="form-label">Indirizzo</label>
+                          <input type="text" class="form-control" id="inputAddress">
+                        </div>
+                        <div class="col-md-6">
+                          <label for="inputCity" class="form-label">Città</label>
+                          <input type="text" class="form-control" id="inputCity">
+                        </div>
+                        <div class="col-md-4">
+                          <label for="inputState" class="form-label">Stato</label>
+                          <select id="inputState" class="form-select">
+                            <option selected>Scegli un'opzione</option>
+                            <option>...</option>
+                          </select>
+                        </div>
+                        <div class="col-md-2">
+                          <label for="inputZip" class="form-label">CAP</label>
+                          <input type="text" class="form-control" id="inputZip">
+                        </div>
+
+                        <div class="col-12 mb-3">
+                          <label for="formFileSm" class="form-label">Foto</label>
+                          <input class="form-control form-control-sm" id="formFileSm" type="file">
+                        </div>
+
+                        <div class="col-12">
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="gridCheck">
+                            <label class="form-check-label" for="gridCheck">
+                              Seleziona per proseguire
+                            </label>
+                          </div>
+                        </div>
+                        <div class="col-12">
+                          <button type="submit" class="btn btn-primary">Salva</button>
+                        </div>
+                      </div>
+
+                    </form>                    
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
         <div class="contents">
           <div class="container">
             <div class="row row-cols-1 row-cols-lg-2 ">
-              <div class="col-12 col-lg-8">
+              <div class="col-12 col-md-7 col-lg-8">
                 
                 <!-- Table -->
                 <div class="card my-3">
-                  <h5 class="card-header">PROSSIME CLASSI</h5>
+                  <h5 class="card-header">Prossime classi</h5>
                   <div class="card-body">
-                    <table class="table caption-top table-hover">
+                    <table class="table table-hover">
                       <thead>
                         <tr>
-                          <th scope="col">Nome</th>
-                          <th scope="col">Data inizio</th>
-                          <th scope="col">ROI</th>
-                          <th scope="col">Stato</th>
-                          <th scope="col">Azioni</th>
+                          <td scope="col">Nome</td>
+                          <td scope="col">Data inizio</td>
+                          <td scope="col">ROI</td>
+                          <td scope="col">Stato</td>
+                          <td scope="col">Azioni</td>
                         </tr>
                       </thead>
                       <tbody>
                         <tr>
-                          <th scope="row">Classe 75</th>
+                          <td scope="row">
+                            <div class="class-avatar">
+                              <img src="img/class-avatar.jpg" alt="">
+                            </div>
+                            <span>Classe 75</span>
+                          </td>
                           <td>15 Feb 2023</td>
                           <td>20%</td>
                           <td><span class="badge text-bg-success">Done</span></td>
@@ -132,7 +263,12 @@
                           </td>
                         </tr>
                         <tr>
-                          <th scope="row">Classe 76</th>
+                          <td scope="row">
+                            <div class="class-avatar">
+                              <img src="img/class-avatar.jpg" alt="">
+                            </div>
+                            <span>Classe 76</span>
+                          </td>
                           <td>16 Feb 2023</td>
                           <td>20%</td>
                           <td><span class="badge text-bg-success">Done</span></td>
@@ -142,17 +278,27 @@
                           </td>
                         </tr>
                         <tr>
-                          <th scope="row">Classe 77</th>
+                          <td scope="row">
+                            <div class="class-avatar">
+                              <img src="img/class-avatar.jpg" alt="">
+                            </div>
+                            <span>Classe 77</span>
+                          </td>
                           <td>17 Feb 2023</td>
                           <td>20%</td>
-                          <td><span class="badge text-bg-warning text-white ">process</span></td>
+                          <td><span class="badge text-bg-warning text-white">process</span></td>
                           <td>
                             <button type="button" class="btn btn-outline-dark "><i class="fa-solid fa-pencil"></i></button>
                             <button type="button" class="btn btn-outline-dark"><i class="fa-solid fa-trash"></i></button>
                           </td>
                         </tr>
                         <tr>
-                          <th scope="row">Classe 78</th>
+                          <td scope="row">
+                            <div class="class-avatar">
+                              <img src="img/class-avatar.jpg" alt="">
+                            </div>
+                            <span>Classe 78</span>
+                          </td>
                           <td>18 Feb 2023</td>
                           <td>20%</td>
                           <td><span class="badge text-bg-success">Done</span></td>
@@ -162,7 +308,12 @@
                           </td>
                         </tr>
                         <tr>
-                          <th scope="row">Classe 79</th>
+                          <td scope="row">
+                            <div class="class-avatar">
+                              <img src="img/class-avatar.jpg" alt="">
+                            </div>
+                            <span>Classe 79</span>
+                          </td>
                           <td>19 Feb 2023</td>
                           <td>20%</td>
                           <td><span class="badge text-bg-danger">failed</span></td>
@@ -172,7 +323,12 @@
                           </td>
                         </tr>
                         <tr>
-                          <th scope="row">Classe 80</th>
+                          <td scope="row">
+                            <div class="class-avatar">
+                              <img src="img/class-avatar.jpg" alt="">
+                            </div>
+                            <span>Classe 80</span>
+                          </td>
                           <td>20 Feb 2023</td>
                           <td>20%</td>
                           <td><span class="badge text-bg-success">Done</span></td>
@@ -182,7 +338,12 @@
                           </td>
                         </tr>
                         <tr>
-                          <th scope="row">Classe 81</th>
+                          <td scope="row">
+                            <div class="class-avatar">
+                              <img src="img/class-avatar.jpg" alt="">
+                            </div>
+                            <span>Classe 81</span>
+                          </td>
                           <td>21 Feb 2023</td>
                           <td>20%</td>
                           <td><span class="badge text-bg-danger">failed</span></td>
@@ -192,7 +353,12 @@
                           </td>
                         </tr>
                         <tr>
-                          <th scope="row">Classe 82</th>
+                          <td scope="row">
+                            <div class="class-avatar">
+                              <img src="img/class-avatar.jpg" alt="">
+                            </div>
+                            <span>Classe 82</span>
+                          </td>
                           <td>22 Feb 2023</td>
                           <td>20%</td>
                           <td><span class="badge text-bg-success">Done</span></td>
@@ -250,7 +416,7 @@
                 <!-- /Accordion -->
               </div>
 
-              <div class="col-12 col-lg-4">
+              <div class="col-12 col-md-5 col-lg-4" >
                 <!-- To Do -->
                 <div class="card my-3">
                   <h5 class="card-header">To Do</h5>
@@ -259,24 +425,24 @@
                       <ul class="list-group list-group-flush">
                         <li class="list-group-item">
                           <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                            <label class="form-check-label" for="flexCheckDefault">
+                            <input class="form-check-input" type="checkbox" value="" id="first-checkbox">
+                            <label class="form-check-label" for="first-checkbox">
                               Kickoff nuove classi
                             </label>
                           </div>
                         </li>
                         <li class="list-group-item">
                           <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                            <label class="form-check-label" for="flexCheckDefault">
+                            <input class="form-check-input" type="checkbox" value="" id="second-checkbox">
+                            <label class="form-check-label" for="second-checkbox">
                               Lezioni su Bootstrap 5 in classe #105
                             </label>
                           </div>
                         </li>
                         <li class="list-group-item">
                           <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                            <label class="form-check-label" for="flexCheckDefault">
+                            <input class="form-check-input" type="checkbox" value="" id="third-checkbox">
+                            <label class="form-check-label" for="third-checkbox">
                               Controllare usename Github studenti
                             </label>
                           </div>
